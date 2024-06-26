@@ -1,0 +1,38 @@
+#d1{
+    background-color: lightsalmon;
+    text-align: center;
+    height: 400px;
+    font-size: 30px;
+  }
+  #d2{
+   
+    height: 100px;
+    font-size: larger;
+  }
+  #d3{
+    height: 50px;
+    font-size: larger;
+  }
+  #d4{
+    height: 50px;
+    font-size: 35px;
+  }
+  #i5{
+    background-color: cyan;
+    height: 700px;
+  }
+  #d6{
+    background-color: burlywood;
+    height: 600px;
+    margin-top: -150px;
+  }
+  .footer {
+    margin-top: 50px;
+     color: #fff;
+     text-align: center;
+     padding: 20px 0; 
+     position:relative ;
+      width: 100%;
+     bottom: 0;
+    
+   } 

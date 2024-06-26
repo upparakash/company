@@ -43,3 +43,13 @@
     background-color: linen;
     height: 850px;
   }
+  .footer {
+    margin-top: 50px;
+     color: #fff;
+     text-align: center;
+     padding: 20px 0; 
+     position:relative ;
+      width: 100%;
+     bottom: 0;
+    
+   } 

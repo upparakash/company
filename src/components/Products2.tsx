@@ -1,4 +1,5 @@
 import React from 'react'
+import './Product2.css';
 
 export const Products2 = () => {
   //abcdefr
@@ -43,3 +44,4 @@ export const Products2 = () => {
     </div>
   )
 }
+export default Products2;

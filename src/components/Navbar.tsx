@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import Logo from '../assets/Logo-sevak.jpg';
-import { useNavigate } from 'react-router-dom';
-
+import './Products';
 interface DropdownState {
   [key: string]: boolean;
 }
 
 const Navbar: React.FC = () => {
   const [dropdown, setDropdown] = useState<DropdownState>({ products: false, services: false, contact: false });
-  const navigate = useNavigate();
 
   const handleMouseEnter = (menu: string) => {
     setDropdown(prevState => ({ ...prevState, [menu]: true }));
@@ -19,9 +17,7 @@ const Navbar: React.FC = () => {
     setDropdown(prevState => ({ ...prevState, [menu]: false }));
   };
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
-  };
+
 
   return (
     <nav className="navbar">
@@ -52,20 +48,20 @@ const Navbar: React.FC = () => {
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
                   <a
-                    href="#products"
+                    href="SMS"
                     className="dropdown-links"
-                    onClick={() => handleNavigation('/product')}
+                   
                   >
                     SMS
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a
-                    href="#products2"
+                    href="S2_SERVICES"
                     className="dropdown-links"
-                    onClick={() => handleNavigation('/product')}
+                    
                   >
-                    S2 SERVICES
+                    S2_SERVICES
                   </a>
                 </li>
               </ul>
