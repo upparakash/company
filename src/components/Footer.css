@@ -1,18 +1,108 @@
 /* src/components/Footer.css */
+#l3{
+  display: flex;
+  align-items: center;
+  background-color:khaki;
+  color: white;
+  padding: 0.7px;
+  height: 80px;
+  bottom: 0;
+  width: 100%;
+
+}
+
+#l3 a {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  color: black; /* Link color */
+
+}
 .footer {
-    background: #333;
+   margin-top: 50px;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    width: 100%;
+    padding: 20px 0; 
+    position:relative ;
+     width: 100%;
     bottom: 0;
-  }
-  
-  .footer-container {
+   
+  } 
+   
+  /* .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+  } */
+  #q1 {
+    background-color: #333;
+    color: white;
+    padding: 0.7px;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
   }
-  
+  /* .link-icon{
+    height: 30px;
+    width: 30px;
+  }
+   */
+   /* Basic styling for the footer */
+ .footer {
+  /* Light background color */
+   padding: 50px 0; /* Padding around the footer */
+
+} 
+
+/* Flexbox container for the links */
+.footer-nav {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the items */
+  align-items: center; /* Vertically align the items */
+  gap: 30px; /* Space between each link */
+  flex-wrap: wrap; /* Wrap links to the next line if needed */
+}
+
+/* Styling for each link */
+.footer-link {
+  display: flex; /* Flexbox for icon and text alignment */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Dark text color */
+  font-size: 16px; /* Font size for link text */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Styling for icons */
+.link-icon {
+  width: 24px; /* Set icon width */
+  height: 24px; /* Set icon height */
+  margin-right: 8px; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer-link:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+/* Hover effect for icons */
+.footer-link:hover .link-icon {
+  transform: scale(1.2); /* Scale icon on hover */
+}
+
+/* Active state for better navigation feedback */
+.footer-link:active {
+  color: #0056b3; /* Darker blue for active state */
+}
+
+/* Responsive design: stack links vertically on small screens */
+@media (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduce gap between items */
+  }
+}
+
 
    

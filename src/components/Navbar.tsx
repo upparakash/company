@@ -1,14 +1,15 @@
-/* src/components/Navbar.tsx */
 import React, { useState } from 'react';
 import './Navbar.css';
 import Logo from '../assets/Logo-sevak.jpg';
+import { useNavigate } from 'react-router-dom';
 
 interface DropdownState {
   [key: string]: boolean;
 }
 
 const Navbar: React.FC = () => {
-  const [dropdown, setDropdown] = useState<DropdownState>({ about: false, services: false, contact: false });
+  const [dropdown, setDropdown] = useState<DropdownState>({ products: false, services: false, contact: false });
+  const navigate = useNavigate();
 
   const handleMouseEnter = (menu: string) => {
     setDropdown(prevState => ({ ...prevState, [menu]: true }));
@@ -18,12 +19,18 @@ const Navbar: React.FC = () => {
     setDropdown(prevState => ({ ...prevState, [menu]: false }));
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
           <img src={Logo} alt="Logo" className="navbar-logo-img" />
-          Sevak Digital Technologies 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Sevak Digital Technologies
         </a>
         <ul className="nav-menu">
           <li
@@ -35,66 +42,50 @@ const Navbar: React.FC = () => {
           </li>
           <li
             className="nav-item"
-            onMouseEnter={() => handleMouseEnter('about')}
-            onMouseLeave={() => handleMouseLeave('about')}
+            onMouseEnter={() => handleMouseEnter('products')}
+            onMouseLeave={() => handleMouseLeave('products')}
           >
-            <a href="#about" className="nav-links">
-              About <i className="fas fa-caret-down"></i>
+            <a href="#products" className="nav-links">
+              Products <i className="fas fa-caret-down"></i>
             </a>
-            {dropdown.about && (
+            {dropdown.products && (
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
-                  <a href="#about1" className="dropdown-links">About Us</a>
+                  <a
+                    href="#products"
+                    className="dropdown-links"
+                    onClick={() => handleNavigation('/product')}
+                  >
+                    SMS
+                  </a>
                 </li>
                 <li className="dropdown-item">
-                  <a href="#team" className="dropdown-links">Our Team</a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="#careers" className="dropdown-links">Careers</a>
+                  <a
+                    href="#products2"
+                    className="dropdown-links"
+                    onClick={() => handleNavigation('/product')}
+                  >
+                    S2 SERVICES
+                  </a>
                 </li>
               </ul>
             )}
           </li>
           <li
             className="nav-item"
-            onMouseEnter={() => handleMouseEnter('services')}
-            onMouseLeave={() => handleMouseLeave('services')}
+            onMouseEnter={() => handleMouseEnter('solutions')}
+            onMouseLeave={() => handleMouseLeave('solutions')}
           >
-            <a href="#services" className="nav-links">
-              Services <i className="fas fa-caret-down"></i>
+            <a href="#solutions" className="nav-links">
+              Solutions <i className="fas fa-caret-down"></i>
             </a>
-            {dropdown.services && (
+            {dropdown.solutions && (
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
-                  <a href="#service1" className="dropdown-links">Service 1</a>
+                  <a href="#solution1" className="dropdown-links">Solution 1</a>
                 </li>
                 <li className="dropdown-item">
-                  <a href="#service2" className="dropdown-links">Service 2</a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="#service3" className="dropdown-links">Service 3</a>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li
-            className="nav-item"
-            onMouseEnter={() => handleMouseEnter('contact')}
-            onMouseLeave={() => handleMouseLeave('contact')}
-          >
-            <a href="#contact" className="nav-links">
-              Contact <i className="fas fa-caret-down"></i>
-            </a>
-            {dropdown.contact && (
-              <ul className="dropdown-menu">
-                <li className="dropdown-item">
-                  <a href="#contact1" className="dropdown-links">Contact Form</a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="#location" className="dropdown-links">Location</a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="#support" className="dropdown-links">Support</a>
+                  <a href="#solution2" className="dropdown-links">Solution 2</a>
                 </li>
               </ul>
             )}

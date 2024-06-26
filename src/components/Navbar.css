@@ -67,36 +67,46 @@
 
 .navbar-logo-img {
   margin-right: 10px; /* Adjust the margin as needed */
-  height: 40px; /* Adjust the height as needed */
+  height: 60px; /* Adjust the height as needed */
   width: auto; /* Maintain aspect ratio */
 }
 
 /* Other existing styles */
 
+/* Style for the nav item (parent element) */
+.nav-item {
+  position: relative; /* This makes the dropdown positioned relative to this item */
+  display: inline-block; /* Keeps the nav items inline */
+}
+
+/* Style for the dropdown menu */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #333;
-  top: 80px;
-  list-style: none;
-  text-align: left;
-  padding: 0;
+  display: none; /* Hide by default */
+  position: absolute; /* Position absolutely relative to .nav-item */
+  top: 100%; /* Place it right below the parent element */
+  left: 0; /* Align the dropdown to the left edge of the parent */
+  z-index: 1000; /* Ensure it is above other content */
+  background-color: black; /* Background color of the dropdown */
+  padding: 10px 0; /* Padding for the dropdown items */
+  box-shadow: 0 8px 16px white; /* Optional: Shadow for dropdown */
+  min-width: 160px; /* Minimum width for the dropdown */
 }
 
-.dropdown-item {
-  background: #333;
-  padding: 0.5rem 1rem;
-}
-
-.dropdown-links {
-  color: #fff;
-  text-decoration: none;
-}
-
-.dropdown-links:hover {
-  background-color: #555;
-}
-
+/* Show the dropdown menu on hover */
 .nav-item:hover .dropdown-menu {
   display: block;
 }
+
+/* Style for dropdown items */
+.dropdown-menu a {
+  color: #333; /* Text color for the dropdown items */
+  padding: 10px 20px; /* Padding for each dropdown item */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make the links block elements for padding */
+}
+
+/* Change background color on hover */
+.dropdown-menu a:hover {
+  background-color: #f1f1f1; /* Background color on hover */
+}
+

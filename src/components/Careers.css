@@ -1,0 +1,11 @@
+#b1{
+    background-color: aqua;
+    height: 600px;
+    width: 100%;
+  }
+  #b2{
+    color:brown;
+    font-style: oblique;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }

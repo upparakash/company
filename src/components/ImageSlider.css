@@ -1,12 +1,368 @@
-/* src/components/ImageSlider.css */
+/* General Styles for the Image Slider */
 .image-slider {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .image-slider img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 500px; /* Adjust height for appropriate visibility */
+  object-fit: cover; /* Ensure the image covers the slider area */
+}
+
+/* About Us Section */
+/* .about-us {
+  padding: 20px;
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.about-us h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  margin-bottom: 20px;
+} */
+
+/* Our Services Section */
+/* .our-services {
+  padding: 20px;
+  text-align: center;
+}
+
+.our-services h1 {
+  color: blue;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  margin-bottom: 40px;
+}
+
+.service-item h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+} */
+
+/* Background Images for Services */
+/* #mobile-development {
+  background-image: url('../assets/mobile.webp');
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: -10px;
+}
+
+#web-design {
+  background-image: url('./web1.jpg');
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+}
+
+#ai-solutions {
+  background-image: url('./api3.jpeg');
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+} */
+
+/* Footer */
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: dimgrey;
+  padding: 10px;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* Miscellaneous Styles */
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.menu-item {
+  position: relative;
+  z-index: 10;
+}
+
+.homeHover:hover {
+  color: blue;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover .dropdown-menu {
+  display: block;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.menu-item a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Additional Sections */
+/* #section1 {
+  background-color: aqua;
+  height: 600px;
+  width: 100%;
+}
+
+#section2 {
+  color: brown;
+  font-style: oblique;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#section3 {
+  background-color: aliceblue;
+  height: 350px;
+  width: 100%;
+  text-align: justify;
+  padding: 20px;
+}
+
+#section4 {
+  color: orangered;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#section5 {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 350px;
+} */
+
+/* #section6 {
+  background-image: url('../assets/img2.avif');
+  height: 1000px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+} */
+
+/* #background1 {
+  background-color: moccasin;
+  height: 400px;
+}
+
+#background2 {
+  background-color: thistle;
+  height: 450px;
+}
+
+#background3 {
+  background-color: linen;
+  height: 850px;
+}
+
+#special-section1 {
+  background-color: khaki;
+  height: 700px;
+}
+
+#special-section2 {
+  background-color: lightsalmon;
+  text-align: center;
+  height: 400px;
+  font-size: 30px;
+}
+
+#special-section3 {
+  height: 100px;
+  font-size: larger;
+}
+
+#special-section4 {
+  height: 50px;
+  font-size: larger;
+}
+
+#special-section5 {
+  height: 50px;
+  font-size: 35px;
+}
+
+#special-section6 {
+  background-color: cyan;
+  height: 600px;
+}
+
+#special-section7 {
+  background-color: burlywood;
+  height: 600px;
+  margin-top: -50px;
+}
+
+#background-section {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 80%;
+} */
+
+/* Container for the entire ImageSlider component */
+.image-slider-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the image slider */
+.image-slider {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto; /* Adjusts height to maintain aspect ratio */
+}
+
+.a6{
+  background-image: url(../assets/img2.avif);
+  width: 100%;
+  height: 800px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+}
+#a7{
+  font-size: 40px;
+  color: blue;
+  margin-left: 650px;
+}
+#a8{
+  margin-top: 10px;
+  margin-left: 620px;
+  text-align:left;
+  display: flex;
+  justify-content: end;
+}
+#a9{
+  color: blue;
+  font-size: 60px;
+  margin-top: -360px;
+  margin-left: 50px;
+}
+#a{
+  background-image: url(../assets/mobile.webp);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin-top: -10px;
+  position: relative;
+} 
+ #a13{
+  margin-right: 1112px;
+  margin-top: -350px;
+  font-size: 10px;
+ }
+ #a14{
+   margin-right: 1160px;
+   margin-top: -30px;
+   font-size: 17px;
+   font-weight: -10px;
+   text-align: justify;
+ } 
+ #b{
+  background-image: url(../assets/web7.jpg);
+  height: 256px;
+  width: 24%;
+  background-repeat: no-repeat;
+  margin-top: -400px;
+  position: relative;
+  margin-left: 550px;
+  background-size: cover;
+} 
+ #a15{
+  margin-right: 40px;
+  margin-top: 30px;
+  font-size: 30px;
+ }
+ #a16{
+   margin-left: 485px;
+   margin-top: -35px;
+   font-size: 17px;
+   font-weight: -10px;
+   text-align: justify;
+ } 
+ #c{
+  background-image: url(../assets/api3.jpeg);
+  height: 256px;
+  width: 24%;
+  background-repeat: no-repeat;
+  margin-top: -400px;
+  position: relative;
+  margin-left: 1119px;
+  background-size: cover;
+} 
+#a17{
+  margin-right: -1090px;
+  margin-top: 30px;
+  font-size: 30px;
+ 
+}
+#a18{
+  margin-left: 1052px;
+   margin-top: -35px;
+   font-size: 17px;
+   font-weight: -10px;
+   text-align: justify;
+
+}
