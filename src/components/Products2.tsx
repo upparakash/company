@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Product2.css';
 
 export const Products2 = () => {

@@ -1,5 +1,5 @@
 // src/components/Footer.jsx
-import React from 'react';
+
 import './Footer.css';
 import careerslogo from '../assets/careerslogo.png';
 import blogslogo from '../assets/blogslogo.png';
